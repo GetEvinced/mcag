@@ -1,0 +1,41 @@
+.terminologyWrapper {
+	display: flex;
+}
+
+.tocWrapper {
+	border-right: 0.15em solid rgb(var(--foreground-rgb));
+	margin-right: 6em;
+	padding-right: 2em;
+	width: 20%;
+}
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 50em;
+	width: 80%;
+}
+
+.contentWrapper section {
+	border-bottom: 0.1em dashed rgb(var(--foreground-rgb));
+	margin-bottom: 6em;
+	padding-bottom: 4em;
+}
+
+.contentWrapper article:not(:last-child) {
+	margin-bottom: 4em;
+}
+
+.imageWrapper {
+	display: inline-flex;
+	flex-direction: column;
+	margin: 2em 1em 0;
+}
+
+.imageWrapper > span {
+	display: block;
+	max-width: inherit;
+	font-size: 0.8em;
+	text-align: center;
+	padding: 0.5em 0.8em 0;
+}
