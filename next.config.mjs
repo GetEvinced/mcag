@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/GetEvinced",
-    assetPrefix:"/GetEvinced/mcag",
+    basePath: "/mcag",
   output: "export",
   reactStrictMode: true,
 };
