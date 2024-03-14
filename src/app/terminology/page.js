@@ -56,9 +56,9 @@ export default async function Terminology() {
       <main className={styles.main}>
       <h1>Terminology</h1>
       <div className={styles.terminologyWrapper}>
-        <div className={styles.tocWrapper}>
+
           <Toc data={data} />
-        </div>
+
         <div className={styles.contentWrapper}>
         {
             Object.keys(data).map(letter => {

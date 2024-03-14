@@ -32,7 +32,6 @@
 html,
 body {
 	max-width: 100vw;
-	overflow-x: hidden;
 }
 
 body {
@@ -61,17 +60,19 @@ h4 {
 	white-space: nowrap !important;
 }
 main {
-	padding: 6rem;
+	padding: 6em;
 	min-height: 100vh;
 }
 
-body > nav {
-	padding: 6rem 6em 0;
+/* Mobile */
+@media (max-width: 700px) {
+	main {
+		padding: 2em;
+	}
 }
 
-body > nav > ul {
-	display: flex;
-	list-style-type: none;
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
 }
 
 .badge {
@@ -102,17 +103,8 @@ body > nav > ul {
 	color: var(--impact-critical-fg);
 }
 
-.main-nav a {
-	display: block;
-	padding: 0.5em;
-	color: inherit;
-	font-size: 1.3em;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.main-nav a:hover {
-	text-decoration: underline;
+.active-toc + div {
+	display: none;
 }
 
 /* @media (prefers-color-scheme: dark) {

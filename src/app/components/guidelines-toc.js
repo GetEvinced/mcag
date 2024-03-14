@@ -1,6 +1,15 @@
+'use client'
+
+import React, { useState, useRef, useEffect } from 'react';
 import styles from "../styles/toc.module.css";
 
-function SuccessCriteria({successcriteria}) {
+
+function SuccessCriteria({successcriteria, status}) { 
+    function collapseNav() {
+        if (typeof window !== 'undefined' && window.innerWidth < 701) {
+            status(false)
+        }
+    }   
     if(successcriteria.length > 0) {
         return (
               <ul>
@@ -8,7 +17,7 @@ function SuccessCriteria({successcriteria}) {
                   successcriteria.map((sc)=> {
                       return (
                         <li key={sc.name}>
-                            <a href={`#${sc.name}`}>{`${sc.num}. ${sc.handle}`}</a>
+                            <a href={`#${sc.name}`} onClick={collapseNav}>{`${sc.num}. ${sc.handle}`}</a>
                         </li>
                       )
                   })
@@ -16,9 +25,14 @@ function SuccessCriteria({successcriteria}) {
               </ul>
         );
     }
-  }
+}
 
-function Guidelines({guidelines}) {
+function Guidelines({guidelines, status}) {
+    function collapseNav() {
+        if (typeof window !== 'undefined' && window.innerWidth < 701) {
+            status(false)
+        }
+    }
     if(guidelines.length > 0) {
         return (
               <ul>
@@ -27,8 +41,8 @@ function Guidelines({guidelines}) {
                       return (
               
                       <li key={guideline.name}>
-                          <a href={`#${guideline.name}`}>{`${guideline.num}. ${guideline.handle}`}</a>
-                          <SuccessCriteria successcriteria={guideline.successcriteria} />
+                          <a href={`#${guideline.name}`} onClick={collapseNav}>{`${guideline.num}. ${guideline.handle}`}</a>
+                          <SuccessCriteria successcriteria={guideline.successcriteria} status={status} />
                       </li>
       
                       )
@@ -37,23 +51,56 @@ function Guidelines({guidelines}) {
               </ul>
         );
     }
-  }
+}
 
 export default function Toc({data}) {
+  const [tocStatus, setTocStatus] = useState(true);
+  const wrapperRef = useRef(null);
+  const navRef = useRef(null);
+  
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 701) {
+      setTocStatus(false)
+    }  
+  }, [])
+  useEffect(() => {  
+    if(!tocStatus) {
+        navRef.current.setAttribute('inert', 'true');
+        wrapperRef.current.classList.remove('active-toc')
+      } else {
+        navRef.current.removeAttribute('inert')
+        wrapperRef.current.classList.add('active-toc')
+      }
+  }, [tocStatus])
   return (
-    <nav aria-label="Table of contents" className={styles.toc} tabIndex="-1">
+    <div className={styles.tocWrapper} ref={wrapperRef}>
+        <button 
+            className={styles.mNavToggleBtn } 
+            aria-expendad={tocStatus}
+            aria-controls="toc"
+            onClick={()=> setTocStatus(!tocStatus)}>
+                Table of contents
+        </button>
+    <nav 
+        aria-label="Table of contents" 
+        className={styles.toc} 
+        tabIndex="-1" 
+        ref={navRef}
+        id="toc">
         <ul>
         {
             data.principles.map((principle)=> {
                 return (
                 <li key={principle.name}>
                     <a href={`#${principle.name}`}>{`${principle.num}. ${principle.handle}`}</a>
-                    <Guidelines guidelines={principle.guidelines} />
+                    <Guidelines guidelines={principle.guidelines} status={setTocStatus} />
                 </li>
                 )
             })
         }
         </ul>
     </nav>
+    </div>
   );
 }

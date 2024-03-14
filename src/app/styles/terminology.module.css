@@ -39,3 +39,29 @@
 	text-align: center;
 	padding: 0.5em 0.8em 0;
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+	.terminologyWrapper {
+		display: block;
+		position: relative;
+	}
+
+	.tocWrapper {
+		background: white;
+		border-right: none;
+		margin-right: 0;
+		padding-right: 0;
+		position: absolute;
+		top: 0;
+		left: -2em;
+	}
+
+	.contentWrapper {
+		width: 100%;
+	}
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

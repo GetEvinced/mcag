@@ -1,0 +1,33 @@
+.mainNav {
+	padding: 6rem 6em 0;
+}
+
+.mainNav > ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.mainNav a {
+	display: block;
+	padding: 0.5em;
+	color: inherit;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.mainNav a:hover {
+	text-decoration: underline;
+}
+/* Mobile */
+@media (max-width: 700px) {
+	.mainNav {
+		padding: 2rem 2em 0;
+	}
+	.mainNav > ul {
+		flex-direction: column;
+	}
+	.mainNav a {
+		text-decoration: underline;
+	}
+}

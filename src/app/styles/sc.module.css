@@ -62,6 +62,14 @@
 	padding-left: 1em;
 }
 
+/* Mobile */
+@media (max-width: 700px) {
+	.testsTable tr td:nth-child(3n + 3),
+	.testsTable tr th:nth-child(3n + 3) {
+		display: none;
+	}
+}
+
 .accordionHeading button {
 	background-color: white;
 	border-top: 0.1em solid rgb(var(--foreground-rgb));
@@ -90,6 +98,9 @@
 	transform: rotate(0);
 }
 
-.accordionHeading button:hover {
-	background-color: rgb(var(--foreground-tint-rgb));
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+	.accordionHeading button:hover {
+		background-color: rgb(var(--foreground-tint-rgb));
+	}
 }
