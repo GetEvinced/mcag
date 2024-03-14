@@ -32,7 +32,7 @@ export default async function Home() {
               data.principles.map((principle)=> {
                   return (
                     <section id={principle.name} tabIndex="-1" key={principle.name}>
-                      <h2 id={`heading-${principle.name}`}>{`${principle.num}. ${principle.handle}`}</h2>
+                      <h2 id={principle.name}>{`${principle.num}. ${principle.handle}`}</h2>
                       <p dangerouslySetInnerHTML={{ __html: principle.title }} />
                       <Guidelines guidelines={principle.guidelines} />
                     </section>

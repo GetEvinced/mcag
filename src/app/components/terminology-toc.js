@@ -4,9 +4,12 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import styles from "../styles/toc.module.css";
 
+const isSmallViewport = typeof window !== 'undefined' && window.innerWidth < 701;
+
 function Terms({values, status}) {
+  
   function collapseNav() {
-    if (typeof window !== 'undefined' && window.innerWidth < 701) {
+    if (isSmallViewport) {
         status(false)
     }
 }
@@ -27,18 +30,21 @@ export default function Toc({data}) {
   
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 701) {
+    if (isSmallViewport) {
       setTocStatus(false)
     }  
   }, [])
   useEffect(() => { 
-    if(!tocStatus) {
-      navRef.current.setAttribute('inert', 'true');
-      wrapperRef.current.classList.remove('active-toc')
-    } else {
-      navRef.current.removeAttribute('inert')
-      wrapperRef.current.classList.add('active-toc')
-    } 
+    if (isSmallViewport) {
+      if(!tocStatus) {
+        navRef.current.setAttribute('inert', 'true');
+        wrapperRef.current.classList.remove('active-toc')
+      } else {
+        navRef.current.removeAttribute('inert')
+        wrapperRef.current.classList.add('active-toc')
+      } 
+    }
+    
   }, [tocStatus])
   return (
     <div className={styles.tocWrapper} ref={wrapperRef}>
@@ -55,10 +61,10 @@ export default function Toc({data}) {
                 Object.keys(data).map(letter => {
                   if(data[letter].length > 0) {
                     return(
-                      <section key={letter}>
-                        <li className={styles.termsSection}>{letter.toUpperCase()}</li>
-                        <Terms values={data[letter]} status={setTocStatus} />
-                      </section>
+                      <>
+                        <li className={styles.termsSection} key={`l-${letter}`}>{letter.toUpperCase()}</li>
+                        <Terms values={data[letter]} status={setTocStatus} key={`t-${letter}`} />
+                      </>
                     )
                   }
                 })

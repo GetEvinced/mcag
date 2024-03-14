@@ -3,10 +3,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from "../styles/toc.module.css";
 
+const isSmallViewport = typeof window !== 'undefined' && window.innerWidth < 701;
 
 function SuccessCriteria({successcriteria, status}) { 
     function collapseNav() {
-        if (typeof window !== 'undefined' && window.innerWidth < 701) {
+        if (isSmallViewport) {
             status(false)
         }
     }   
@@ -29,7 +30,7 @@ function SuccessCriteria({successcriteria, status}) {
 
 function Guidelines({guidelines, status}) {
     function collapseNav() {
-        if (typeof window !== 'undefined' && window.innerWidth < 701) {
+        if (isSmallViewport) {
             status(false)
         }
     }
@@ -60,18 +61,21 @@ export default function Toc({data}) {
   
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth < 701) {
+    if (isSmallViewport) {
       setTocStatus(false)
     }  
   }, [])
-  useEffect(() => {  
-    if(!tocStatus) {
-        navRef.current.setAttribute('inert', 'true');
-        wrapperRef.current.classList.remove('active-toc')
-      } else {
-        navRef.current.removeAttribute('inert')
-        wrapperRef.current.classList.add('active-toc')
-      }
+  useEffect(() => { 
+    if (isSmallViewport) {
+        if(!tocStatus) {
+            navRef.current.setAttribute('inert', 'true');
+            wrapperRef.current.classList.remove('active-toc')
+          } else {
+            navRef.current.removeAttribute('inert')
+            wrapperRef.current.classList.add('active-toc')
+          }
+      }  
+    
   }, [tocStatus])
   return (
     <div className={styles.tocWrapper} ref={wrapperRef}>

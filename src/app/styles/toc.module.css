@@ -4,10 +4,7 @@
 	padding-right: 2em;
 	position: relative;
 	width: 20%;
-	/* position: sticky;
-	top: 0;
-	height: 100vh;
-	overflow-y: scroll; */
+	min-width: 16em;
 }
 
 .toc ul {
@@ -66,18 +63,24 @@
 	}
 
 	.toc {
-		position: absolute;
-		display: flex;
+		position: fixed;
+		top: 0;
 		background: white;
 		padding: 3em 2em 2em;
 		left: 0;
 		transition: all 300ms ease-in-out;
 		width: 100vw;
 		z-index: 1;
+		height: 100vh;
+		overflow-y: scroll;
 	}
 
 	.toc[inert='true'] {
 		left: -105vw;
+	}
+
+	.toc ul {
+		margin-bottom: 4em;
 	}
 }
 
