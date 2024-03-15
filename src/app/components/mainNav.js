@@ -17,10 +17,13 @@ import Link from 'next/link';
                     <Link href="/" aria-current={isCurrent("/")}>MCAG</Link>
                 </li>
                 <li>
+                    <Link href="/about" aria-current={isCurrent("/about")}>About</Link>
+                </li>
+                <li>
                     <Link href="/terminology" aria-current={isCurrent("/terminology")}>Terminology</Link>
                 </li>
                 <li>
-                    <Link href="/formulas">Formulas</Link>
+                    <Link href="/formulas" aria-current={isCurrent("/formulas")}>Formulas</Link>
                 </li>
             </ul>
         </nav>

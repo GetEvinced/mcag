@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import styles from "../styles/toc.module.css";
+import Link from 'next/link';
 
 const isSmallViewport = typeof window !== 'undefined' && window.innerWidth < 701;
 
@@ -18,7 +19,7 @@ function SuccessCriteria({successcriteria, status}) {
                   successcriteria.map((sc)=> {
                       return (
                         <li key={sc.name}>
-                            <a href={`#${sc.name}`} onClick={collapseNav}>{`${sc.num}. ${sc.handle}`}</a>
+                            <Link href={`#${sc.name}`} onClick={collapseNav}>{`${sc.num}. ${sc.handle}`}</Link>
                         </li>
                       )
                   })
@@ -42,7 +43,7 @@ function Guidelines({guidelines, status}) {
                       return (
               
                       <li key={guideline.name}>
-                          <a href={`#${guideline.name}`} onClick={collapseNav}>{`${guideline.num}. ${guideline.handle}`}</a>
+                          <Link href={`#${guideline.name}`} onClick={collapseNav}>{`${guideline.num}. ${guideline.handle}`}</Link>
                           <SuccessCriteria successcriteria={guideline.successcriteria} status={status} />
                       </li>
       
@@ -97,7 +98,7 @@ export default function Toc({data}) {
             data.principles.map((principle)=> {
                 return (
                 <li key={principle.name}>
-                    <a href={`#${principle.name}`}>{`${principle.num}. ${principle.handle}`}</a>
+                    <Link href={`#${principle.name}`}>{`${principle.num}. ${principle.handle}`}</Link>
                     <Guidelines guidelines={principle.guidelines} status={setTocStatus} />
                 </li>
                 )

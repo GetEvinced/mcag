@@ -19,6 +19,9 @@
 .mainNav a:hover {
 	text-decoration: underline;
 }
+.mainNav a[aria-current] {
+	text-decoration: underline;
+}
 /* Mobile */
 @media (max-width: 700px) {
 	.mainNav {
@@ -26,8 +29,5 @@
 	}
 	.mainNav > ul {
 		flex-direction: column;
-	}
-	.mainNav a {
-		text-decoration: underline;
 	}
 }

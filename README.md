@@ -1,8 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mobile Content Accessibility Guidelines (MCAG)
 
-## Getting Started
+MCAG is intended to be a document that reflects the conformance requirements of WCAG but also refers to the unique differences and challenges of mobile technologies that are not adequately expressed in WCAG. The document results from cross-referencing WCAG 2.2 success criteria with the accessibility guidelines of the different platforms and other sources.
+<br />
+MCAG was written into the template and structure of WCAG, and it preserves the four POUR. However, since its use is intended for development teams, its internal division relies more on Apple's Human Interface Guidelines and Android's Accessibility Principles. Accordingly, the guidelines' names, divisions, and success criteria are different. The differences are reflected mainly in wording and affiliation. However, any changes were made with reference and an affinity to WCAG and its content.
+<br />
+MCAG does not pretend to replace WCAG but only provides a uniform interpretation of it for mobile technologies while preserving its conformance requirements.
 
-First, run the development server:
+The document in front of you is a first draft and an invitation to cooperation and community discussion on the need for clear and dedicated guidelines for mobile technologies that will meet the needs of users and regulatory requirements.
+
+## Run the project locally
+
+### System Requirements:
+
+Node.js 18.17 or later.
+
+### Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +26,4 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) with your browser.

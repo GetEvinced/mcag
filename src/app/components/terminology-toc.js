@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react';
-
+import Link from 'next/link';
 import styles from "../styles/toc.module.css";
 
 const isSmallViewport = typeof window !== 'undefined' && window.innerWidth < 701;
@@ -17,7 +17,7 @@ function Terms({values, status}) {
       values.map((value)=> {
         const headingId = value.title.toLowerCase().replaceAll(' ', '-').replace('(', '').replace(')', '');
         return(
-            <li key={headingId}><a href={`#${headingId}`} onClick={collapseNav}>{value.title}</a></li>
+            <li key={headingId}><Link href={`#${headingId}`} onClick={collapseNav}>{value.title}</Link></li>
         )
       })
     )

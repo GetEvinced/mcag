@@ -1,6 +1,6 @@
 .tocWrapper {
 	border-right: 0.15em solid rgb(var(--foreground-rgb));
-	margin-right: 6em;
+	margin-right: 4em;
 	padding-right: 2em;
 	position: relative;
 	width: 20%;
@@ -12,12 +12,12 @@
 }
 
 .toc li > ul {
-	margin: 0.8em 0 1em;
+	margin: 1.3em 0;
 	padding-left: 1em;
 }
 
 .toc li > ul li {
-	margin-bottom: 0.2em;
+	margin-bottom: 0.8em;
 }
 
 .toc a {

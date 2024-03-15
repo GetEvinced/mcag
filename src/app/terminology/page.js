@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 async function getData() {
-  const filePath = path.join(process.cwd(), '/src/app/terminology.json');
+  const filePath = path.join(process.cwd(), '/src/app/data/terminology.json');
   const jsonData = await fs.readFile(filePath);
   const data = JSON.parse(jsonData);
   

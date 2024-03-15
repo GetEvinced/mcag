@@ -19,10 +19,10 @@
                         "num": "1.1.1",
                         "name": "accessibility-enabled",
                         "handle": "Accessibility Enabled",
-                        "title": "Assistive technologies can reach, parse, and convey essential content and user-operable elements in the UI.",
+                        "title": "Assistive technologies can reach, parse, and convey <a href='/terminology#essential-content'>essential content</a> and user-operable elements in the UI.",
                         "tests": [
                             {
-                                "text": "Assistive technologies can reach and programmatically read all essential content, except when:",
+                                "text": "Assistive technologies can reach and <a href='/terminology#programmatically-read/determined'>programmatically</a> read all essential content, except when:",
                                 "details": ["The content has  is a nearby equivalent alternative that's accessible to assistive technologies."],
                                 "impact": ["Critical"],
                                 "impactNotes": ""
@@ -57,7 +57,7 @@
                         "num": "1.1.2",
                         "name": "explicit-role",
                         "handle": "Explicit Role",
-                        "title": "Each UI component that allows user interaction or its semantics affects the meaning of its content must have an explicit <a href='#'>role</a> defined.",
+                        "title": "Each UI component that allows user interaction or its semantics affects the meaning of its content must have an explicit <a href='/terminology#role'>role</a> defined.",
                         "tests": [
                             {
                                 "text": "Each UI component that allows user interaction or its semantics affects the meaning of its content must have an explicit role defined.",
@@ -116,7 +116,7 @@
                         "num": "1.1.3",
                         "name": "interactive-elements-have-names",
                         "handle": "Interactive Elements Have Names",
-                        "title": "Elements that require unique identifiers and context, have an <a href='#'>accessible name</a> that can be <a href='#'>programmatically read</a>. Examples include, but are not limited to, buttons, links, form elements, and groups of content.",
+                        "title": "Elements that require unique identifiers and context, have an <a href='/terminology#accessible-name'>accessible name</a> that can be <a href='/terminology#programmatically-read/determined'>programmatically read</a>. Examples include, but are not limited to, buttons, links, form elements, and groups of content.",
                         "tests": [
                             {
                                 "text": "All the interactive UI components must have an accessible name programmatically determined.",
@@ -180,7 +180,7 @@
                         "num": "1.1.4",
                         "name": "perceivable-state",
                         "handle": "Perceivable State",
-                        "title": "The current state of elements supporting multiple states, such as (but not limited to) checkboxes, radio buttons, and drop-down lists, can be <a href=''>programmatically determined.</a>",
+                        "title": "The current state of elements supporting multiple states, such as (but not limited to) checkboxes, radio buttons, and drop-down lists, can be <a href='/terminology#programmatically-read/determined'>programmatically determined.</a>",
                         "tests": [
                             {
                                 "text": "Element's state can be programmatically determined and read.",
@@ -189,7 +189,7 @@
                                 "impactNotes": ""
                             },
                             {
-                                "text": "The states of elements are set only by the properties designated for them according to the element type. (see also <a href='#'>3.4.5 Clean Names</a>)",
+                                "text": "The states of elements are set only by the properties designated for them according to the element type. (see also <a href='#clean-names'>3.2.4 Clean Names</a>)",
                                 "details": [],
                                 "impact": ["Moderate"],
                                 "impactNotes": ""
@@ -229,7 +229,7 @@
                         "num": "1.1.5",
                         "name": "perceivable-value",
                         "handle": "Perceivable Value",
-                        "title": "For elements that return or represent values, such as (but not limited to) checkboxes, radio buttons, and form input fields, their value can be <a href='#'>determined and read programmatically</a>.",
+                        "title": "For elements that return or represent values, such as (but not limited to) checkboxes, radio buttons, and form input fields, their value can be <a href='/terminology#programmatically-read/determined'>determined and read programmatically</a>.",
                         "tests": [
                             {
                                 "text": "If an element is returning a value, it can be programmatically determined and read.",
@@ -321,23 +321,23 @@
                 "num": "1.2",
                 "name": "media-alternatives",
                 "handle": "Media Alternatives",
-                "title": "This guideline and its success criteria deal with <a href='#'>media</a> files embedded in the application, from <a href='#'>static media</a>, such as images, icons, and infographics, to <a href='#'>time-based media</a>, such as video or audio, and <a href='#'>synchronized media</a>. Since the content of media files is usually consumed in a sensory manner, often visual or auditory, they require alternatives so users with auditory or visual impairments can perceive the content and its context.",
+                "title": "This guideline and its success criteria deal with <a href='/terminology#media'>media</a> files embedded in the application, from <a href='/terminology#static-media'>static media</a>, such as images, icons, and infographics, to <a href='/terminology#time-based-media'>time-based media</a>, such as video or audio, and <a href='/terminology#synchronized-media'>synchronized media</a>. Since the content of media files is usually consumed in a sensory manner, often visual or auditory, they require alternatives so users with auditory or visual impairments can perceive the content and its context.",
                 "successcriteria": [
                     {
                         "id": "MCAG:static-media-alternatives",
                         "num": "1.2.1",
                         "name": "static-media-alternatives",
                         "handle": "Static-Media Alternatives",
-                        "title": "All <a href='#'>static media</a> have a text alternative with the equivalent meaning and purpose, and that can be parsed and presented by assistive technologies, except when the media element is used only for visual formatting or decoration, or it is not visually presented. In these cases, it should be implemented so that assistive technology can ignore it.",
+                        "title": "All <a href='/terminology#static-media'>static media</a> have a text alternative with the equivalent meaning and purpose, and that can be parsed and presented by assistive technologies, except when the media element is used only for visual formatting or decoration, or it is not visually presented. In these cases, it should be implemented so that assistive technology can ignore it.",
                         "tests": [
                             {
-                                "text": "Static media that present essential content have a text alternative.",
+                                "text": "Static media that present <a href='/terminology#essential-content'>essential content</a> have a text alternative.",
                                 "details": ["The content has  is a nearby equivalent alternative that's accessible to assistive technologies."],
                                 "impact": ["Critical"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Static media that is purely decorative, used only for visual formatting, or is invisible in the UI is ignored by assistive technologies.",
+                                "text": "Static media that is <a href='/terminology#image-types'>purely decorative</a>, used only for visual formatting, or is invisible in the UI is ignored by assistive technologies.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
@@ -383,7 +383,7 @@
                         "num": "1.2.2",
                         "name": "media-players-titled",
                         "handle": "Media Players Titled",
-                        "title": "If an element is a player of time-based media, it has a title that can be programmatically read and provides a descriptive identification of the media content.",
+                        "title": "If an element is a player of <a href='/terminology#time-based-media'>time-based media</a>, it has a title that can be <a href='/terminology#programmatically-read/determined'>programmatically read</a> and provides a descriptive identification of the media content.",
                         "tests": [
                             {
                                 "text": "Audio and video players have a title that is programmatically read by assistive technologies.",
@@ -468,7 +468,7 @@
                         "title": "Video-only tracks have alternatives that present an equivalent to the audio content in a manner that users with auditory impairments can perceive.",
                         "tests": [
                             {
-                                "text": "Every pre-recorded video-only track must provide captions or audio descriptions with equivalent content to the recorded video.",
+                                "text": "Every pre-recorded video-only track must provide <a href='/terminology#captions'>captions</a> or <a href='/terminology#audio-descriptions'>audio descriptions</a> with equivalent content to the recorded video.",
                                 "details": [],
                                 "impact": ["Critical"],
                                 "impactNotes": ""
@@ -506,16 +506,16 @@
                         "num": "1.2.5",
                         "name": "synchronized-media-alternatives",
                         "handle": "Synchronized Media Alternatives",
-                        "title": "Live and prerecorded synchronized media tracks have alternatives equivalent to the media's audio and video content, so users with auditory or visual impairments can perceive the entire content.",
+                        "title": "Live and prerecorded <a href='/terminology#synchronized-media'>synchronized media</a> tracks have alternatives equivalent to the media's audio and video content, so users with auditory or visual impairments can perceive the entire content.",
                         "tests": [
                             {
-                                "text": "Every synchronized media track, prerecorded or live must provide captions.",
+                                "text": "Every synchronized media track, prerecorded or live must provide <a href='/terminology#captions'>captions</a>.",
                                 "details": [],
                                 "impact": ["Critical"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Every prerecorded synchronized media track,  or live must provide audio descriptions.",
+                                "text": "Every prerecorded synchronized media track,  or live must provide <a href='/terminology#audio-descriptions'>audio descriptions</a>.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
@@ -577,7 +577,7 @@
                         "num": "1.3.1",
                         "name": "real-time-updates-modalities",
                         "handle": "Real-time Updates Modalities",
-                        "title": "Real-time updates including essential status or value changes are conveyed in various modalities so all users can perceive them.",
+                        "title": "<a href='/terminology#real-time-updates'>Real-time updates</a> including essential status or value changes are conveyed in various modalities so all users can perceive them.",
                         "tests": [
                             {
                                 "text": "Real-time updates have a visual indication on screen.",
@@ -598,7 +598,7 @@
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Time-sensitive real-time updates reflected in push notifications while not using the app, except when:",
+                                "text": "<a href='/terminology#time-sensitive-updates'>Time-sensitive</a> real-time updates reflected in push notifications while not using the app, except when:",
                                 "details": ["Users turned off explicitly notification from the app"],
                                 "impact": ["Moderate", "Critical"],
                                 "impactNotes": ""
@@ -685,13 +685,13 @@
                         "title": "Visual text must have a sufficient contrast in color from its background to be readable.",
                         "tests": [
                             {
-                                "text": "Texts sized 17 points or less should have a contrast of at least 4.5:1 from their background, except when:",
+                                "text": "Texts sized 17 <ahref='/terminology#points-measurement-unit>points</a> or less should have a contrast of at least 4.5:1 from their background, except when:",
                                 "details": ["The text is part of a logo or brand name.", "The text is a label of a disabled control.", "The text is meant solely for decorative purposes and contains no essential information."],
                                 "impact": ["Minor", "Serious"],
                                 "impactNotes": "We should try thinking of a key to scale the impact by contrast threshold. "
                             },
                             {
-                                "text": "Texts sized 18 points or higher should have a contrast of at least 3:1 from their background, except when:",
+                                "text": "Texts sized 18 <ahref='/terminology#points-measurement-unit>points</a> or higher should have a contrast of at least 3:1 from their background, except when:",
                                 "details": ["The text is part of a logo or brand name.", "The text is a label of a disabled control.", "The text is meant solely for decorative purposes and contains no essential information."],
                                 "impact": ["Minor", "Serious"],
                                 "impactNotes": "We should try thinking of a key to scale the impact by contrast threshold. "
@@ -785,7 +785,7 @@
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Focus indication has a contrast of at least 3:1 with its background.",
+                                "text": "<a href='/terminology#focus-indication'>Focus indication</a> has a contrast of at least 3:1 with its background.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
@@ -810,28 +810,44 @@
                             }
                     },
                     {
-                        "id": "MCAG:perceivable-toasts",
-                        "num": "1.3.2",
-                        "name": "perceivable-toasts",
-                        "handle": "Perceivable Toasts",
-                        "title": "",
+                        "id": "MCAG:distinguished-by-color",
+                        "num": "1.4.4",
+                        "name": "distinguished-by-color",
+                        "handle": "Distinguished by color",
+                        "title": "Avoid relying only on colors to distinguish between elements' state and value or to convey essential information.",
                         "tests": [
                             {
-                                "text": "",
+                                "text": "Elements distinction does not solely rely on color cues.",
                                 "details": [],
-                                "impact": ["Critical"],
+                                "impact": ["Serious"],
+                                "impactNotes": ""
+                            },
+                            {
+                                "text": "Elements' states distinction does not solely rely on color cues",
+                                "details": [],
+                                "impact": ["Serious"],
+                                "impactNotes": ""
+                            },
+                            {
+                                "text": "Conveying information, indicating an action, or prompting a response, are not communicated solely by color.",
+                                "details": [],
+                                "impact": ["Serious"],
                                 "impactNotes": ""
                             }
                         ],
                         "references": {
                                 "wcag": [
                                     {
-                                        "title": "4.1.3 Status Messages",
-                                        "level": "AA",
-                                        "url": "https://www.w3.org/TR/WCAG22/#status-messages"
+                                        "title": "1.4.1 Use of Color",
+                                        "level": "A",
+                                        "url": "https://www.w3.org/TR/WCAG22/#use-of-color"
                                     }
                                 ],
                                 "appleHumanInterface": [
+                                    {
+                                        "title": "Color and effects",
+                                        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility#Color-and-effects"
+                                    }
                                 ],
                                 "appleDeveloperDocs": [
                                 ],
@@ -909,16 +925,16 @@
                         "num": "2.1.2",
                         "name": "simplified-gestures",
                         "handle": "Simplified Gestures",
-                        "title": "User actions that require complex gestures, like path-based or multipoint gestures, have a single-pointer alternative.",
+                        "title": "User actions that require complex gestures, like path-based or multipoint gestures, have a <a href='/terminology#single-pointer-gestures'>single-pointer</> alternative.",
                         "tests": [
                             {
-                                "text": "Path-based gestures have a single-pointer alternative",
+                                "text": "<a href='/terminology#path-based-gestures'>Path-based gestures</a> have a single-pointer alternative",
                                 "details": [],
                                 "impact": ["Critical"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Multipoint gestures have a keyboard alternative",
+                                "text": "<a href='/terminology#multipoint-gestures'>Multipoint gestures</a> have a keyboard alternative",
                                 "details": [],
                                 "impact": ["Critical"],
                                 "impactNotes": ""
@@ -1374,10 +1390,10 @@
                         "num": "2.5.1",
                         "name": "bypass-blocks",
                         "handle": "Bypass Blocks",
-                        "title": "If any essential content or features are sequentially located after lengthy content lists, such as feeds, product catalogs, or search results, enable direct access for users to navigate to them quickly.",
+                        "title": "If any <a href='/terminology#essential-content'>essential content</a> or features are sequentially located after lengthy content lists, such as feeds, product catalogs, or search results, enable direct access for users to navigate to them quickly.",
                         "tests": [
                             {
-                                "text": "Users can reach essential elements and content using the quick access features of screen readers' “Accessibility Navigation Menus” or similar technology.",
+                                "text": "Users can reach essential elements and content using the quick access features of screen readers' <a href='/terminology#accessibility-navigation-menus-on-screen-readers'>“Accessibility Navigation Menus”</a> or similar technology.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
@@ -1540,7 +1556,7 @@
                         "num": "3.1.2",
                         "name": "logical-reading-sequence",
                         "handle": "Logical Reading Sequence",
-                        "title": "Content and interactive elements follow a logical reading sequence that facilitates comprehension and effective interaction for assistive technology users.",
+                        "title": "Content and interactive elements follow a logical <a href='/terminology#reading-sequence'>reading sequence</a> that facilitates comprehension and effective interaction for assistive technology users.",
                         "tests": [
                             {
                                 "text": "The programmatic order of elements makes sense and reflects the content hierarchy of the screen.",
@@ -1708,7 +1724,7 @@
                         "tests": [
                             {
                                 "text": "In a screen with a multiple content sections, each section has a heading, except when:",
-                                "details": ["The section has another identifier that can be determined and announced programmatically and", "sections are distinguished from each other visually."],
+                                "details": ["The section has another identifier that can be <a href='/terminology#programmatically-read/determined'>determined and announced programmatically</a> and", "sections are distinguished from each other visually."],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
                             }
@@ -1796,31 +1812,31 @@
                         "title": "The text alternatives of images and media elements should be descriptive, and their phrasing should be appropriate to the element's purpose as described in the <a href='https://www.w3.org/WAI/tutorials/images/'>W3C's Images Tutorial</a>.",
                         "tests": [
                             {
-                                "text": "Text alternatives of informative images represent each image's content.",
+                                "text": "Text alternatives of <a href='/terminology#image-types'>informative images</a> represent each image's content.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Text alternatives of functional images describe the action or outcome triggered by interacting with the image",
+                                "text": "Text alternatives of <a href='/terminology#image-types'>functional images</a> describe the action or outcome triggered by interacting with the image",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Text alternatives of complex images provide a concise yet comprehensive description of the crucial information within the image.",
+                                "text": "Text alternatives of <a href='/terminology#image-types'>complex images</a> provide a concise yet comprehensive description of the crucial information within the image.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Decorative images are not announced by assistive technologies",
+                                "text": "<a href='/terminology#image-types'>Decorative images</a> are not announced by assistive technologies",
                                 "details": [],
                                 "impact": ["Moderate"],
                                 "impactNotes": ""
                             },
                             {
-                                "text": "Text alternatives of images of text contain the text presented within the image.",
+                                "text": "Text alternatives of <a href='/terminology#images-of-text'>images of text</a> contain the text presented within the image.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
@@ -1849,7 +1865,7 @@
                         "num": "3.2.3",
                         "name": "consistent-labeling",
                         "handle": "Consistent Labeling",
-                        "title": "Interactive elements with exact functionality have the same <a href='#'>accessible name</a>.",
+                        "title": "Interactive elements with exact functionality have the same <a href='/terminology#accessible-name'>accessible name</a>.",
                         "tests": [
                             {
                                 "text": "Elements with identical functionality on the same screen have the same accessible name.",
@@ -1887,7 +1903,7 @@
                         "num": "3.2.4",
                         "name": "unique-labels",
                         "handle": "Unique Labels",
-                        "title": "Labels and <a href='#'>accessible name</a> of interactive elements should be unique identifiers.",
+                        "title": "Labels and <a href='/terminology#accessible-name'>accessible name</a> of interactive elements should be unique identifiers.",
                         "tests": [
                             {
                                 "text": "Interactive elements' labels and accessible names are unique., except when:",
@@ -1919,7 +1935,7 @@
                         "num": "3.2.4",
                         "name": "clean-names",
                         "handle": "Clean Names",
-                        "title": "Elements' <a href='#'>accessible name</a> do not contain state or value statements or a reference to the element's type or role.",
+                        "title": "Elements' <a href='/terminology#accessible-name'>accessible name</a> do not contain state or value statements or a reference to the element's <a href='/terminology#role'>type or role</a>.",
                         "tests": [
                             {
                                 "text": "Interactive elements' accessible names do not contain state statements.",
@@ -2076,7 +2092,7 @@
                         "num": "3.3.3",
                         "name": "font-variants-on-text-blocks",
                         "handle": "Font Variants on Text Blocks",
-                        "title": "<a href='#'>Text blocks</a> are not entirely written with font variants that may affect the ease of legibility. ",
+                        "title": "<a href='/terminology#text-blocks'>Text blocks</a> are not entirely written with font variants that may affect the ease of legibility. ",
                         "tests": [
                             {
                                 "text": "Text blocks are not entirely written with capital letters.",
@@ -2123,7 +2139,7 @@
                         "num": "3.3.4",
                         "name": "text-blocks-lignment",
                         "handle": "Text Blocks Alignment",
-                        "title": "<a href='#'>Text blocks</a> are not set to have a “<a href='#'>full justify</a>” alignment.",
+                        "title": "<a href='/terminology#text-blocks'>Text blocks</a> are not set to have a “<a href='/terminology#full-justify-text-alignment'>full justify</a>” alignment.",
                         "tests": [
                             {
                                 "text": "The inter-word spacings within text blocks are even and consistent.",
@@ -2422,7 +2438,7 @@
                                 "impactNotes": ""
                             },
                             {
-                                "text": "The error message can be read programmatically.",
+                                "text": "The error message can be <a href='/terminology#programmatically-read/determined'>read programmatically</a>.",
                                 "details": [],
                                 "impact": ["Serious","Critical"],
                                 "impactNotes": ""
@@ -2640,7 +2656,7 @@
                         "title": "The UI and content are adaptive to the operating system's color modes, such as dark and inverted color modes.",
                         "tests": [
                             {
-                                "text": "For each display mode supported by the operating system, the UI and its content, including UI elements, texts, and images of text, are adaptive to display mode changes.",
+                                "text": "For each display mode supported by the operating system, the UI and its content, including UI elements, texts, and <a href='/terminology#images-of-text'>images of text</a>, are adaptive to display mode changes.",
                                 "details": [],
                                 "impact": ["Serious"],
                                 "impactNotes": ""
@@ -2803,7 +2819,7 @@
                         "tests": [
                             {
                                 "text": "Content presented within Web Views meets the WCAG 2.2, AA requirements, except when:",
-                                "details": ["Elements' target size should meet <a href=''>2.5.5 Target Size (Enhanced) (AAA)</a> instead of <a href=''>2.5.8 Target Size (Minimum) (AA)</a>"],
+                                "details": ["Elements' target size should meet <a href='https://www.w3.org/TR/WCAG22/#target-size-enhanced'>2.5.5 Target Size (Enhanced) (AAA)</a> instead of <a href='https://www.w3.org/TR/WCAG22/#target-size-minimum'>2.5.8 Target Size (Minimum) (AA)</a>"],
                                 "impact": ["Serious", "Critical"],
                                 "impactNotes": ""
                             }

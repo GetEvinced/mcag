@@ -11,6 +11,10 @@
 	margin-bottom: 3em;
 }
 
+.prefix p {
+	margin-bottom: 2em;
+}
+
 @media (prefers-reduced-motion) {
 	.card:hover span {
 		transform: none;
