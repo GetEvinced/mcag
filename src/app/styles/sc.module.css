@@ -71,7 +71,7 @@
 }
 
 .accordionHeading button {
-	background-color: white;
+	background-color: rgb(var(--background-rgb));
 	border-top: 0.1em solid rgb(var(--foreground-rgb));
 	border-bottom: 0.1em solid rgb(var(--foreground-rgb));
 	border-left: none;

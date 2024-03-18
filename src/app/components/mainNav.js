@@ -11,6 +11,11 @@ import Link from 'next/link';
         return pathname === path ? "page" : undefined
     }
     return(
+        <>
+        <div className="skipLinks">
+            { (isCurrent("/") || isCurrent("/terminology")) && <a href="#toc">Skip to table of contents</a>}
+            <a href="#content">Skip to content</a>
+        </div>
         <nav className={styles.mainNav}>
             <ul>
                 <li>
@@ -27,6 +32,7 @@ import Link from 'next/link';
                 </li>
             </ul>
         </nav>
+        </>
     )
   }
 

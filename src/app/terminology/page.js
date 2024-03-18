@@ -59,7 +59,7 @@ export default async function Terminology() {
 
           <Toc data={data} />
 
-        <div className={styles.contentWrapper}>
+        <div className={styles.contentWrapper} id="content" tabIndex="-1">
         {
             Object.keys(data).map(letter => {
               if(data[letter].length > 0) {

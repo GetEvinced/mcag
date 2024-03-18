@@ -15,13 +15,13 @@
 	--impact-critical-fg: #4b36a3;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 	:root {
 		--foreground-rgb: 255, 255, 255;
 		--foreground-tint-rgb: 69, 69, 69;
 		--background-rgb: 0, 0, 0;
 	}
-} */
+}
 
 * {
 	box-sizing: border-box;
@@ -113,8 +113,24 @@ p {
 	display: none;
 }
 
-/* @media (prefers-color-scheme: dark) {
+.skipLinks {
+	position: relative;
+}
+.skipLinks a {
+	position: absolute;
+	padding: 0.8em 1em;
+	background-color: rgb(var(--background-rgb));
+	border-radius: 0.3em;
+	border: 0.1em solid rgb(var(--foreground-rgb));
+	left: 3em;
+	top: -5em;
+}
+.skipLinks a:focus {
+	top: 0;
+}
+
+@media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
 	}
-} */
+}

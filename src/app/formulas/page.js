@@ -8,7 +8,7 @@ export const metadata = {
 export default async function Formulas() {
   return (
 
-      <main className={styles.main}>
+      <main className={styles.main} id="content" tabIndex="-1">
         <h1>Formulas for measurement units conversion</h1>
         <div className={styles.contentWrapper}>
           <p>

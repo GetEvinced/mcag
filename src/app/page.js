@@ -20,12 +20,12 @@ async function getData() {
 export default async function Home() {
   const data = await getData();
   return (
-      <main className={styles.main}>
+      <main className={styles.main} >
         <h1>Mobile Content Accessibility Guidelines (MCAG)</h1>
         <div className={styles.guidelinesWrapper}>
            <Toc data={data} />
           <div className={styles.contentWrapper}>
-          <section className={styles.prefix}>
+          <section className={styles.prefix} id="content" tabIndex="-1">
             <h2>What is MCAG?</h2>
             <p>
             MCAG is intended to be a document that reflects the conformance requirements of <a href="https://www.w3.org/TR/WCAG22/">the W3C's Web Content Accessibility Guidelines (WCAG 2.2)</a> but also refers to the unique differences and challenges of mobile technologies that are not adequately expressed in WCAG. The document results from cross-referencing WCAG 2.2 success criteria with the accessibility guidelines of the different platforms and other sources.
