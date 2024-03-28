@@ -17,8 +17,10 @@ Node.js 18.17 or later.
 ### Run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 # or
 pnpm dev
@@ -27,3 +29,5 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+Or check out https://getevinced.github.io/mcag/ to view the docs via Github Pages
