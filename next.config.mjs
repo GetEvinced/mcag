@@ -5,6 +5,7 @@ const nextConfig = {
     reactStrictMode: true,
     images: {
       loader: 'akamai',
+      unoptimized: true,
       path: '',
     }
 };
